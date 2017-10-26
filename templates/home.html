@@ -3,6 +3,21 @@
 	<title>Headlines</title>
 </head>
 <body>
+	<form action="/" method="POST"> 
+		<input type="text" name="publication" placeholder="search" />
+		<input type="submit" value="Submit" />
+	</form>
+	<form>
+		<input type="text" name="city" placeholder="weather search">
+		<input type="submit" value="Submit">
+	</form>
+	<h2>Current weather</h2>
+	<p>City: <b>{{weather.city}}, {{weather.country}}</b></p>
+	<p>{{weather.description}} |{{weather.temperature}}&#8451;</p>
+
+	<h2>Currency</h2>
+	1 {{currency_from}} = {{currency_to}} {{rate}}
+
 	<h1>Headlines</h1>
 	{% for article in articles %}
 	<a href={{article.link}}><b>{{article.title}}</b></a><br />
